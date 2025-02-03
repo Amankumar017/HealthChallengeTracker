@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkoutService } from '../../services/workout.service';
 import { Workout } from '../../models/workout.model';
+import { NgFor } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-workout-list',
   templateUrl: './workout-list.component.html',
-  styleUrls: ['./workout-list.component.css']
+  styleUrls: ['./workout-list.component.css'],
+  standalone: true,
+  imports: [FormsModule],
 })
 export class WorkoutListComponent implements OnInit {
   workouts: Workout[] = [];
