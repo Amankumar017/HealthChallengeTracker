@@ -9,12 +9,11 @@ import { WorkoutService } from '../../services/workout.service';
 })
 export class WorkoutChartComponent implements OnInit {
   public chartLabels: string[] = [];
-  
   public chartData: { data: number[]; label: string }[] = [
     { data: [], label: 'Workout Minutes' }
   ];
-  
   public chartType: ChartType = 'bar';
+  public chartOptions: ChartOptions = {}; // Define chartOptions
 
   constructor(private workoutService: WorkoutService) {}
 
