@@ -1,0 +1,24 @@
+<div>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search by name">
+    <button (click)="search()">Search</button>
+  
+    <select [(ngModel)]="filterType" (change)="filter()">
+      <option value="">All</option>
+      <option value="Running">Running</option>
+      <option value="Cycling">Cycling</option>
+      <option value="Swimming">Swimming</option>
+    </select>
+  
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Workout Type</th>
+        <th>Minutes</th>
+      </tr>
+      <tr *ngFor="let workout of workouts">
+        <td>{{ workout.name }}</td>
+        <td>{{ workout.type }}</td>
+        <td>{{ workout.minutes }}</td>
+      </tr>
+    </table>
+  </div>

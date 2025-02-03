@@ -1,0 +1,7 @@
+<div class="p-4 border rounded shadow bg-white max-w-md mx-auto">
+    <h2 class="text-lg font-bold mb-2">Add Workout</h2>
+    <input class="border p-2 w-full mb-2" type="text" [(ngModel)]="name" placeholder="Enter Name">
+    <input class="border p-2 w-full mb-2" type="text" [(ngModel)]="type" placeholder="Enter Workout Type">
+    <input class="border p-2 w-full mb-2" type="number" [(ngModel)]="minutes" placeholder="Enter Minutes">
+    <button (click)="addWorkout()" class="bg-blue-500 text-white px-4 py-2 rounded">Add Workout</button>
+</div>
